@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 class Homeprovider extends ChangeNotifier {
   bool on = false;
   bool off = false;
+  bool onoff = false;
 
   void click(bool value) {
     on = value;
@@ -13,4 +14,10 @@ class Homeprovider extends ChangeNotifier {
     off = value;
     notifyListeners();
   }
+  void click1(bool value)
+  {
+    onoff= value;
+    notifyListeners();
+  }
+
 }

@@ -95,8 +95,8 @@ class _SettingState extends State<Setting> {
                 title: Text("Change Password"),
                 trailing: Switch(
                     activeColor: Colors.red,
-                    onChanged: (value) => homeproviderfalse!.click(value),
-                    value: homeprovidertrue!.on) ,
+                    onChanged: (value) => homeproviderfalse!.click1(value),
+                    value: homeprovidertrue!.onoff) ,
               ),
               Align(
                 alignment: Alignment.topLeft,
