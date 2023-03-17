@@ -1,110 +1,219 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:setting_ui/screen/home/provider/home_provider.dart';
 
-class Setting extends StatefulWidget {
-  const Setting({Key? key}) : super(key: key);
+import '../provider/home_provider.dart';
+
+class home_screen extends StatefulWidget {
+  const home_screen({Key? key}) : super(key: key);
 
   @override
-  State<Setting> createState() => _SettingState();
+  State<home_screen> createState() => _home_screenState();
 }
 
-class _SettingState extends State<Setting> {
-  Homeprovider? homeprovidertrue;
-  Homeprovider? homeproviderfalse;
-
+class _home_screenState extends State<home_screen> {
   @override
   Widget build(BuildContext context) {
-    homeproviderfalse = Provider.of<Homeprovider>(context, listen: false);
-    homeprovidertrue = Provider.of<Homeprovider>(context, listen: true);
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.red,
-          title: Text("Setting UI"),
+          title: Text("Settings UI", style: TextStyle(color: Colors.white)),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
+        body: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  "Common",
-                  style:
-                      TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
-                ),
+              Padding(
+                padding: EdgeInsets.only(top: 15, left: 15),
+                child: Text("Common",
+                    style: TextStyle(
+                        color: Colors.red, fontWeight: FontWeight.bold)),
               ),
               ListTile(
-                leading: Icon(Icons.language),
                 title: Text("Language"),
-                subtitle: Text("English"),
+                leading: Icon(Icons.language, color: Colors.grey.shade700),
+                subtitle: Text("English",
+                    style: TextStyle(color: Colors.grey.shade700)),
+              ),
+              Container(
+                height: 0.2,
+                width: double.infinity,
+                color: Colors.grey,
               ),
               ListTile(
-                leading: Icon(Icons.cloud),
                 title: Text("Environment"),
-                subtitle: Text("Production"),
+                leading:
+                    Icon(Icons.cloud_outlined, color: Colors.grey.shade700),
+                subtitle: Text("Production",
+                    style: TextStyle(color: Colors.grey.shade700)),
               ),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  "Account",
-                  style:
-                      TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+              Padding(
+                padding: EdgeInsets.only(top: 15, left: 15),
+                child: Text("Account",
+                    style: TextStyle(
+                        color: Colors.red, fontWeight: FontWeight.bold)),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.call,
+                      color: Colors.grey.shade700,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Phone number",
+                    )
+                  ],
                 ),
               ),
-              ListTile(
-                leading: Icon(Icons.phone),
-                title: Text("Phone number"),
+              Container(
+                height: 0.2,
+                width: double.infinity,
+                color: Colors.grey,
               ),
-              ListTile(
-                leading: Icon(Icons.email),
-                title: Text("Email"),
-              ),
-              ListTile(
-                leading: Icon(Icons.exit_to_app),
-                title: Text("Sign out"),
-              ),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  "Secutiry",
-                  style:
-                      TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+              Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.email,
+                      color: Colors.grey.shade700,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Email",
+                    )
+                  ],
                 ),
               ),
-              ListTile(
-                leading: Icon(Icons.phonelink_lock),
-                title: Text("Lock app in background"),
-                trailing: Switch(activeColor: Colors.red,
-                    onChanged: (value) => homeproviderfalse!.click(value),
-                    value: homeprovidertrue!.on),
-
+              Container(
+                height: 0.2,
+                width: double.infinity,
+                color: Colors.grey,
               ),
-              ListTile(
-                leading: Icon(Icons.fingerprint),
-                title: Text("Use fingerprint"),
-                trailing: Switch(
-                    onChanged: (value) => homeproviderfalse!.clickoff(value),
-                    value: homeprovidertrue!.off) ,
-              ),
-              ListTile(
-                leading: Icon(Icons.lock),
-                title: Text("Change Password"),
-                trailing: Switch(
-                    activeColor: Colors.red,
-                    onChanged: (value) => homeproviderfalse!.click1(value),
-                    value: homeprovidertrue!.onoff) ,
-              ),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  "Misc",
-                  style:
-                      TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+              Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.assignment_return_outlined,
+                      color: Colors.grey.shade700,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text("Sign out")
+                  ],
                 ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 15, left: 15),
+                child: Text("Security",
+                    style: TextStyle(
+                        color: Colors.red, fontWeight: FontWeight.bold)),
+              ),
+              Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.phonelink_lock,
+                      color: Colors.grey.shade700,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text("Lock app in background"),
+                    Spacer(),
+                    Consumer<home_provider>(
+                      builder: (context, value, child) => Switch(
+                        value:
+                            Provider.of<home_provider>(context, listen: false)
+                                .select,
+                        onChanged: (value) {
+                          Provider.of<home_provider>(context, listen: false)
+                              .update(value);
+                        },
+                        activeColor: Colors.red,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                height: 0.2,
+                width: double.infinity,
+                color: Colors.grey,
+              ),
+              Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Row(
+                  children: [
+                    Icon(Icons.fingerprint, color: Colors.grey.shade700),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text("Use fingerprint"),
+                    Spacer(),
+                    Consumer<home_provider>(
+                      builder: (context, value, child) => Switch(
+                        value:
+                            Provider.of<home_provider>(context, listen: false)
+                                .select1,
+                        onChanged: (value) {
+                          Provider.of<home_provider>(context, listen: false)
+                              .change(value);
+                        },
+                        activeColor: Colors.red,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                height: 0.2,
+                width: double.infinity,
+                color: Colors.grey,
+              ),
+              Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Row(
+                  children: [
+                    Icon(Icons.lock, color: Colors.grey.shade700),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text("Change password"),
+                    Spacer(),
+                    Consumer<home_provider>(
+                      builder: (context, value, child) => Switch(
+                        value:
+                            Provider.of<home_provider>(context, listen: false)
+                                .select2,
+                        onChanged: (value) {
+                          Provider.of<home_provider>(context, listen: false)
+                              .ch(value);
+                        },
+                        activeColor: Colors.red,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 15, left: 15),
+                child: Text("Misc",
+                    style: TextStyle(
+                        color: Colors.red, fontWeight: FontWeight.bold)),
               ),
             ],
           ),

@@ -1,23 +1,26 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-class Homeprovider extends ChangeNotifier {
-  bool on = false;
-  bool off = false;
-  bool onoff = false;
+class home_provider extends ChangeNotifier
+{
+  bool select = true;
+  bool select1 = true;
+  bool select2 = true;
 
-  void click(bool value) {
-    on = value;
-    notifyListeners();
-  }
-
-  void clickoff(bool value) {
-    off = value;
-    notifyListeners();
-  }
-  void click1(bool value)
+  void update(bool val)
   {
-    onoff= value;
+    select = val;
     notifyListeners();
   }
 
+  void change(bool value)
+  {
+    select1 = value;
+    notifyListeners();
+  }
+
+  void ch(bool value)
+  {
+    select2 = value;
+    notifyListeners();
+  }
 }
