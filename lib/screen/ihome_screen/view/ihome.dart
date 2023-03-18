@@ -31,40 +31,67 @@ class _ios_screenState extends State<ios_screen> {
                   color: Colors.grey.shade200,
                   padding: EdgeInsets.only(top: 19, left: 15),
                   child: Text(
-                      "Common", style: TextStyle(color: Colors.grey.shade500)),
+                    "Common",
+                    style: TextStyle(
+                      color: Colors.grey.shade500,
+                    ),
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Row(
                     children: [
-                      SizedBox(width: 10,),
+                      SizedBox(
+                        width: 10,
+                      ),
                       Icon(Icons.language, color: Colors.grey),
-                      SizedBox(width: 20,),
+                      SizedBox(
+                        width: 20,
+                      ),
                       Text("Language"),
                       Spacer(),
                       Text("English", style: TextStyle(color: Colors.grey)),
-                      SizedBox(width: 20,),
-                      Icon(Icons.arrow_forward_ios, color: Colors.grey, size: 15),
-                      SizedBox(width: 10,),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        color: Colors.grey,
+                        size: 15,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
                     ],
                   ),
                 ),
                 Container(
-                  height: 1, width: double.infinity, color: Colors.grey.shade200,
+                  height: 1,
+                  width: double.infinity,
+                  color: Colors.grey.shade200,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Row(
                     children: [
-                      SizedBox(width: 10,),
+                      SizedBox(
+                        width: 10,
+                      ),
                       Icon(CupertinoIcons.cloud, color: Colors.grey),
-                      SizedBox(width: 20,),
+                      SizedBox(
+                        width: 20,
+                      ),
                       Text("environment"),
                       Spacer(),
                       Text("Production", style: TextStyle(color: Colors.grey)),
-                      SizedBox(width: 20,),
-                      Icon(Icons.arrow_forward_ios, color: Colors.grey, size: 15),
-                      SizedBox(width: 10,),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Icon(Icons.arrow_forward_ios,
+                          color: Colors.grey, size: 15),
+                      SizedBox(
+                        width: 10,
+                      ),
                     ],
                   ),
                 ),
@@ -73,81 +100,114 @@ class _ios_screenState extends State<ios_screen> {
                   width: double.infinity,
                   color: Colors.grey.shade200,
                   padding: EdgeInsets.only(top: 19, left: 15),
-                  child: Text(
-                      "Account", style: TextStyle(color: Colors.grey.shade500)),
+                  child: Text("Account",
+                      style: TextStyle(color: Colors.grey.shade500)),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Row(
                     children: [
-                      SizedBox(width: 10,),
+                      SizedBox(
+                        width: 10,
+                      ),
                       Icon(Icons.call, color: Colors.grey),
-                      SizedBox(width: 20,),
+                      SizedBox(
+                        width: 20,
+                      ),
                       Text("Phone number"),
                       Spacer(),
-                      Icon(Icons.arrow_forward_ios, color: Colors.grey, size: 15),
-                      SizedBox(width: 10,),
+                      Icon(Icons.arrow_forward_ios,
+                          color: Colors.grey, size: 15),
+                      SizedBox(
+                        width: 10,
+                      ),
                     ],
                   ),
                 ),
                 Container(
-                  height: 1, width: double.infinity, color: Colors.grey.shade200,
+                  height: 1,
+                  width: double.infinity,
+                  color: Colors.grey.shade200,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Row(
                     children: [
-                      SizedBox(width: 10,),
+                      SizedBox(
+                        width: 10,
+                      ),
                       Icon(Icons.email, color: Colors.grey),
-                      SizedBox(width: 20,),
+                      SizedBox(
+                        width: 20,
+                      ),
                       Text("Email"),
                       Spacer(),
-                      Icon(Icons.arrow_forward_ios, color: Colors.grey, size: 15),
-                      SizedBox(width: 10,),
+                      Icon(Icons.arrow_forward_ios,
+                          color: Colors.grey, size: 15),
+                      SizedBox(
+                        width: 10,
+                      ),
                     ],
                   ),
                 ),
                 Container(
-                  height: 1, width: double.infinity, color: Colors.grey.shade200,
+                  height: 1,
+                  width: double.infinity,
+                  color: Colors.grey.shade200,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Row(
                     children: [
-                      SizedBox(width: 10,),
+                      SizedBox(
+                        width: 10,
+                      ),
                       Icon(Icons.output, color: Colors.grey),
-                      SizedBox(width: 20,),
+                      SizedBox(
+                        width: 20,
+                      ),
                       Text("Sign out"),
                       Spacer(),
-                      Icon(Icons.arrow_forward_ios, color: Colors.grey, size: 15),
-                      SizedBox(width: 10,),
+                      Icon(Icons.arrow_forward_ios,
+                          color: Colors.grey, size: 15),
+                      SizedBox(
+                        width: 10,
+                      ),
                     ],
                   ),
                 ),
                 Container(
-                  height: 1, width: double.infinity, color: Colors.grey.shade200,
+                  height: 1,
+                  width: double.infinity,
+                  color: Colors.grey.shade200,
                 ),
                 Container(
                   height: 50,
                   width: double.infinity,
                   color: Colors.grey.shade200,
                   padding: EdgeInsets.only(top: 19, left: 15),
-                  child: Text(
-                      "Security", style: TextStyle(color: Colors.grey.shade500)),
+                  child: Text("Security",
+                      style: TextStyle(color: Colors.grey.shade500)),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Row(
                     children: [
-                      SizedBox(width: 10,),
+                      SizedBox(
+                        width: 10,
+                      ),
                       Icon(Icons.phonelink_lock, color: Colors.grey),
-                      SizedBox(width: 20,),
+                      SizedBox(
+                        width: 20,
+                      ),
                       Text("Lock app in background"),
                       Spacer(),
                       CupertinoSwitch(
-                        value: Provider.of<home_provider>(context,listen: true).select,
+                        value: Provider.of<home_provider>(context, listen: true)
+                            .select,
                         onChanged: (value) {
-                          Provider.of<home_provider>(context,listen: false).update(value);
+                          Provider.of<home_provider>(context, listen: false)
+                              .update(value);
                         },
                         activeColor: Colors.red,
                       ),
@@ -155,21 +215,29 @@ class _ios_screenState extends State<ios_screen> {
                   ),
                 ),
                 Container(
-                  height: 1, width: double.infinity, color: Colors.grey.shade200,
+                  height: 1,
+                  width: double.infinity,
+                  color: Colors.grey.shade200,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Row(
                     children: [
-                      SizedBox(width: 10,),
+                      SizedBox(
+                        width: 10,
+                      ),
                       Icon(Icons.fingerprint, color: Colors.grey),
-                      SizedBox(width: 20,),
+                      SizedBox(
+                        width: 20,
+                      ),
                       Text("Use fingerprint"),
                       Spacer(),
                       CupertinoSwitch(
-                        value: Provider.of<home_provider>(context,listen: true).select1,
+                        value: Provider.of<home_provider>(context, listen: true)
+                            .select1,
                         onChanged: (value) {
-                          Provider.of<home_provider>(context,listen: false).change;
+                          Provider.of<home_provider>(context, listen: false)
+                              .change;
                         },
                         activeColor: Colors.red,
                       ),
@@ -177,21 +245,29 @@ class _ios_screenState extends State<ios_screen> {
                   ),
                 ),
                 Container(
-                  height: 1, width: double.infinity, color: Colors.grey.shade200,
+                  height: 1,
+                  width: double.infinity,
+                  color: Colors.grey.shade200,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Row(
                     children: [
-                      SizedBox(width: 10,),
+                      SizedBox(
+                        width: 10,
+                      ),
                       Icon(Icons.lock, color: Colors.grey),
-                      SizedBox(width: 20,),
+                      SizedBox(
+                        width: 20,
+                      ),
                       Text("Change passward"),
                       Spacer(),
                       CupertinoSwitch(
-                        value: Provider.of<home_provider>(context,listen: true).select2,
+                        value: Provider.of<home_provider>(context, listen: true)
+                            .select2,
                         onChanged: (value) {
-                          Provider.of<home_provider>(context,listen: false).ch(value);
+                          Provider.of<home_provider>(context, listen: false)
+                              .ch(value);
                         },
                         activeColor: Colors.red,
                       ),
@@ -199,51 +275,71 @@ class _ios_screenState extends State<ios_screen> {
                   ),
                 ),
                 Container(
-                  height: 1, width: double.infinity, color: Colors.grey.shade200,
+                  height: 1,
+                  width: double.infinity,
+                  color: Colors.grey.shade200,
                 ),
                 Container(
                   height: 50,
                   width: double.infinity,
                   color: Colors.grey.shade200,
                   padding: EdgeInsets.only(top: 19, left: 15),
-                  child: Text(
-                      "Misc", style: TextStyle(color: Colors.grey.shade500)),
+                  child: Text("Misc",
+                      style: TextStyle(color: Colors.grey.shade500)),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Row(
                     children: [
-                      SizedBox(width: 10,),
-                      Icon(
-                          CupertinoIcons.arrow_down_doc_fill, color: Colors.grey),
-                      SizedBox(width: 20,),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Icon(CupertinoIcons.arrow_down_doc_fill,
+                          color: Colors.grey),
+                      SizedBox(
+                        width: 20,
+                      ),
                       Text("Terms of service"),
                       Spacer(),
-                      Icon(Icons.arrow_forward_ios, color: Colors.grey, size: 15),
-                      SizedBox(width: 10,),
+                      Icon(Icons.arrow_forward_ios,
+                          color: Colors.grey, size: 15),
+                      SizedBox(
+                        width: 10,
+                      ),
                     ],
                   ),
                 ),
                 Container(
-                  height: 1, width: double.infinity, color: Colors.grey.shade200,
+                  height: 1,
+                  width: double.infinity,
+                  color: Colors.grey.shade200,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Row(
                     children: [
-                      SizedBox(width: 10,),
-                      Icon(
-                          CupertinoIcons.arrow_down_doc_fill, color: Colors.grey),
-                      SizedBox(width: 20,),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Icon(CupertinoIcons.arrow_down_doc_fill,
+                          color: Colors.grey),
+                      SizedBox(
+                        width: 20,
+                      ),
                       Text("Open source licences"),
                       Spacer(),
-                      Icon(Icons.arrow_forward_ios, color: Colors.grey, size: 15),
-                      SizedBox(width: 10,),
+                      Icon(Icons.arrow_forward_ios,
+                          color: Colors.grey, size: 15),
+                      SizedBox(
+                        width: 10,
+                      ),
                     ],
                   ),
                 ),
                 Container(
-                  height: 1, width: double.infinity, color: Colors.grey.shade200,
+                  height: 1,
+                  width: double.infinity,
+                  color: Colors.grey.shade200,
                 ),
               ],
             ),
